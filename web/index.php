@@ -56,7 +56,8 @@ $app->get('/db/', function() use($app) {
 });
 
 $app->get('/hello/{name}', function ($name) use ($app) {
-  return 'Hello '.$app->escape($name);
+  // return 'Hello '.$app->escape($name);
+  return $app['twig']->render('phptest.html.php');
 });
 
 $app->run();
