@@ -1,0 +1,86 @@
+Game has  player
+          stock boards
+          advisors
+
+          Player has  bank account (cash)
+                      net worth (cash + portfolio value + assets)
+                      portfolio
+                      assets (used like mini games. i.e. do you wnat to invest in a painting or bway show ect..., buy a house... ect)
+
+          Stock boards  have stocks
+
+                        stocks have
+                          cost
+                          past values [array]
+                          future values [array]
+                          volitility(how widely they will swing)
+                          min and max value
+                                belong 
+                                  to a category like industrial, bonds, tech whatever.
+                                    caregory sets the volitiliy and others way stocks will behave
+
+
+                        ave value(calcuated not an attr)
+
+          later:
+
+          advisors 'see the future' and will give advice based on cost and chance.
+          Headline in news paper every day, like a free advisor (maybe looks ahead but not as far as advisor?)
+
+
+Stocks:
+
+These are basically rip offs of real life company
+names. There are four types of stocks - blue chip,
+speculative, growth, and cyclical. 
+
+Every week the same type of stocks rise and fall. 
+Early on the same stock will stay at number 1 for days,
+but later in the game, it switches from one stock to the
+next. This makes it more difficult to guess which one
+will be the hottest stock. However, knowing what types
+of stocks are popular gives you a better chance. 
+
+It's a weekly thing. Two types of stocks are popular
+all week and then next at least one of them will 
+usually change to something else, sometimes both 
+will. Basically, any of the stocks included in that 
+type will rise a little. Some more than others though, 
+which is indicated by the five hot stocks of the day 
+list. That varies much more than the type of stocks do. 
+
+---------------
+Blue Chip - least volitile, highest floor
+---------------
+ATNT
+Boing
+Xearox
+YBM
+Yapple
+
+--------------
+Speculative - most volitile, highest ceiling(in terms of pertcentage from start?)
+--------------
+Bethleham
+Chryer
+Pan Am
+Strayhound
+Teradying
+
+--------------
+Cyclical - dependant on over all economay, find a way to derive these prices based on totals on each board plus interest rates?
+--------------
+Carnivore
+Centipede
+Coughman
+Marrinot
+Rattel
+
+--------------
+Growth - these should tend to go up but not by a lot
+--------------
+American Depress
+Exconrail
+Firedman's
+Reebucks
+C. Schlob
