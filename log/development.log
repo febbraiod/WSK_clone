@@ -36,3 +36,5 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36mStock Load (5.4ms)[0m  [1mSELECT "stocks".* FROM "stocks"[0m
+  [1m[35mStock Load (1.0ms)[0m  SELECT "stocks".* FROM "stocks"
