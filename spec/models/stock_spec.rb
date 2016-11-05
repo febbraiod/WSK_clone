@@ -33,10 +33,16 @@ RSpec.describe Stock, type: :model do
     expect(FactoryGirl.build(:stock, min_value: 5, max_value: 100, starting_value: 1)).to_not be_valid
   end
 
-  context "stock years are generated at beginning of game" do
+  context "stock years are generated at beginning of game with stock to board method" do
+    stock = FactoryGirl.build(:stock)
+    stock_year = stock.stock_to_board
+
     it "generates a stock year" do
-      stock = FactoryGirl.build(:stock)
-      stock.stock_to_board.length == 52
+      stock_year.length == 52
+    end
+
+    it "only returns values between min and max" do
+      expect(stock_year.any? {|n| n < stock.min_value || n > stock.max_value}).to be false
     end
   end
 
