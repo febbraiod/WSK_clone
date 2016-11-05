@@ -1,6 +1,6 @@
 Game has  player
           stock boards
-          advisors
+          
 
           Player has  bank account (cash)
                       net worth (cash + portfolio value + assets)
@@ -15,9 +15,10 @@ Game has  player
                           future values [array]
                           volitility(how widely they will swing)
                           min and max value
-                                belong 
-                                  to a category like industrial, bonds, tech whatever.
-                                    caregory sets the volitiliy and others way stocks will behave
+                        
+                        stocks belong to
+                                    a category like industrial, bonds, tech whatever.
+                                    category sets the volitiliy and others way stocks will behave
 
 
                         ave value(calcuated not an attr)
@@ -49,8 +50,9 @@ type will rise a little. Some more than others though,
 which is indicated by the five hot stocks of the day 
 list. That varies much more than the type of stocks do. 
 
+
 ---------------
-Blue Chip - least volitile, highest floor
+Blue Chip - least volatile, highest floor
 ---------------
 ATNT
 Boing
@@ -59,22 +61,13 @@ YBM
 Yapple
 
 --------------
-Speculative - most volitile, highest ceiling(in terms of pertcentage from start?)
+Speculative - most volatile, highest ceiling(in terms of pertcentage from start?)
 --------------
 Bethleham
 Chryer
 Pan Am
 Strayhound
 Teradying
-
---------------
-Cyclical - dependant on over all economay, find a way to derive these prices based on totals on each board plus interest rates?
---------------
-Carnivore
-Centipede
-Coughman
-Marrinot
-Rattel
 
 --------------
 Growth - these should tend to go up but not by a lot
@@ -84,3 +77,12 @@ Exconrail
 Firedman's
 Reebucks
 C. Schlob
+
+--------------
+Cyclical - dependant on over all economay, find a way to derive these prices based on totals on each board plus interest rates?
+--------------
+Carnivore
+Centipede
+Coughman
+Marrinot
+Rattel
