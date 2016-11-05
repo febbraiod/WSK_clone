@@ -1,13 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Stock, type: :model do
-  subject.category = Category.new(title: 'industrial')
 
+  it "has a valid factory" do
+    expect(FactoryGirl.create(:stock)).to be_valid
+  end
+
+  stock = FactoryGirl.create(:stock)
   it "is valid with valid attributes" do
-    expect(subject).to be_valid
+    expect(stock).to be_valid
   end
   it "is not valid without a company name" do
-    expect(stock).to_not be_valid
+    expect(stock.company_name = nil).to_not be_valid
   end
   it "is not valid without a starting value" do
     expect(stock).to_not be_valid
