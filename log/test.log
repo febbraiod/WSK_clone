@@ -1054,3 +1054,279 @@
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (9.7ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Sipes, Ernser and Zboncak"], ["volatility_index", 7], ["created_at", "2016-11-05 23:14:44.002921"], ["updated_at", "2016-11-05 23:14:44.002921"]]
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Macejkovic, Keeling and Smitham"], ["volatility_index", 3], ["created_at", "2016-11-05 23:14:44.049684"], ["updated_at", "2016-11-05 23:14:44.049684"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Ebert-Beier"], ["volatility_index", 5], ["created_at", "2016-11-05 23:14:44.060684"], ["updated_at", "2016-11-05 23:14:44.060684"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "stocks" ("company_name", "starting_value", "min_value", "max_value", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["company_name", "Beier, Dickinson and Smith"], ["starting_value", 52.16], ["min_value", 6.0], ["max_value", 256229.0], ["category_id", 41], ["created_at", "2016-11-05 23:14:44.066075"], ["updated_at", "2016-11-05 23:14:44.066075"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Towne and Sons"], ["volatility_index", 8], ["created_at", "2016-11-05 23:14:44.079054"], ["updated_at", "2016-11-05 23:14:44.079054"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Paucek LLC"], ["volatility_index", 4], ["created_at", "2016-11-05 23:14:44.089778"], ["updated_at", "2016-11-05 23:14:44.089778"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Anderson Inc"], ["volatility_index", 1], ["created_at", "2016-11-05 23:14:44.102911"], ["updated_at", "2016-11-05 23:14:44.102911"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Olson, Runte and Hoeger"], ["volatility_index", 4], ["created_at", "2016-11-05 23:14:44.116137"], ["updated_at", "2016-11-05 23:14:44.116137"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Kerluke, Tremblay and Pacocha"], ["volatility_index", 3], ["created_at", "2016-11-05 23:14:44.136180"], ["updated_at", "2016-11-05 23:14:44.136180"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Baumbach-Streich"], ["volatility_index", 6], ["created_at", "2016-11-05 23:14:44.144756"], ["updated_at", "2016-11-05 23:14:44.144756"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Ondricka, Hayes and Muller"], ["volatility_index", 2], ["created_at", "2016-11-05 23:14:44.155756"], ["updated_at", "2016-11-05 23:14:44.155756"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Cummings-Wiza"], ["volatility_index", 3], ["created_at", "2016-11-05 23:14:44.176548"], ["updated_at", "2016-11-05 23:14:44.176548"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "West-O'Kon"], ["volatility_index", 5], ["created_at", "2016-11-05 23:14:44.187000"], ["updated_at", "2016-11-05 23:14:44.187000"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Dare, Leannon and Russel"], ["volatility_index", 9], ["created_at", "2016-11-05 23:18:54.893824"], ["updated_at", "2016-11-05 23:18:54.893824"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Friesen-Simonis"], ["volatility_index", 1], ["created_at", "2016-11-05 23:18:54.940822"], ["updated_at", "2016-11-05 23:18:54.940822"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Stroman, Grant and Hansen"], ["created_at", "2016-11-05 23:18:54.954455"], ["updated_at", "2016-11-05 23:18:54.954455"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["volatility_index", 1], ["created_at", "2016-11-05 23:18:55.039604"], ["updated_at", "2016-11-05 23:18:55.039604"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Rosenbaum-Wisozk"], ["volatility_index", 5], ["created_at", "2016-11-05 23:18:55.053760"], ["updated_at", "2016-11-05 23:18:55.053760"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "stocks" ("company_name", "starting_value", "min_value", "max_value", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["company_name", "Miller, Lindgren and MacGyver"], ["starting_value", 76.3], ["min_value", 6.0], ["max_value", 757886.0], ["category_id", 55], ["created_at", "2016-11-05 23:18:55.062520"], ["updated_at", "2016-11-05 23:18:55.062520"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Price LLC"], ["volatility_index", 7], ["created_at", "2016-11-05 23:18:55.089776"], ["updated_at", "2016-11-05 23:18:55.089776"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Nienow Group"], ["volatility_index", 6], ["created_at", "2016-11-05 23:18:55.108578"], ["updated_at", "2016-11-05 23:18:55.108578"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Stark Group"], ["volatility_index", 9], ["created_at", "2016-11-05 23:18:55.142220"], ["updated_at", "2016-11-05 23:18:55.142220"]]
+  [1m[36m (0.9ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  [1m[36m (1.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fadel Group"], ["volatility_index", 5], ["created_at", "2016-11-05 23:18:55.194164"], ["updated_at", "2016-11-05 23:18:55.194164"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Casper and Sons"], ["volatility_index", 9], ["created_at", "2016-11-05 23:18:55.220632"], ["updated_at", "2016-11-05 23:18:55.220632"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Hintz, Gleichner and Muller"], ["volatility_index", 1], ["created_at", "2016-11-05 23:18:55.237839"], ["updated_at", "2016-11-05 23:18:55.237839"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Crona-Cassin"], ["volatility_index", 6], ["created_at", "2016-11-05 23:18:55.259353"], ["updated_at", "2016-11-05 23:18:55.259353"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Nader, Mante and Rohan"], ["volatility_index", 3], ["created_at", "2016-11-05 23:18:55.286455"], ["updated_at", "2016-11-05 23:18:55.286455"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Volkman and Sons"], ["volatility_index", 5], ["created_at", "2016-11-05 23:18:55.298734"], ["updated_at", "2016-11-05 23:18:55.298734"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Funk LLC"], ["volatility_index", 3], ["created_at", "2016-11-05 23:23:24.424773"], ["updated_at", "2016-11-05 23:23:24.424773"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Kiehn Inc"], ["volatility_index", 7], ["created_at", "2016-11-05 23:23:24.443315"], ["updated_at", "2016-11-05 23:23:24.443315"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Rowe, Hackett and Gutkowski"], ["volatility_index", 2], ["created_at", "2016-11-05 23:23:24.454727"], ["updated_at", "2016-11-05 23:23:24.454727"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "stocks" ("company_name", "starting_value", "min_value", "max_value", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["company_name", "Ferry Group"], ["starting_value", 61.1], ["min_value", 7.0], ["max_value", 392604.0], ["category_id", 67], ["created_at", "2016-11-05 23:23:24.457109"], ["updated_at", "2016-11-05 23:23:24.457109"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Boehm, Anderson and Predovic"], ["volatility_index", 6], ["created_at", "2016-11-05 23:23:24.462247"], ["updated_at", "2016-11-05 23:23:24.462247"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Goldner, Beer and Spinka"], ["volatility_index", 2], ["created_at", "2016-11-05 23:23:24.466036"], ["updated_at", "2016-11-05 23:23:24.466036"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Keebler-Will"], ["volatility_index", 1], ["created_at", "2016-11-05 23:23:24.470829"], ["updated_at", "2016-11-05 23:23:24.470829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Goyette-Kutch"], ["volatility_index", 5], ["created_at", "2016-11-05 23:23:24.475401"], ["updated_at", "2016-11-05 23:23:24.475401"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Kuvalis, Cremin and Wolff"], ["volatility_index", 1], ["created_at", "2016-11-05 23:23:24.480950"], ["updated_at", "2016-11-05 23:23:24.480950"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Schaden-Blick"], ["volatility_index", 8], ["created_at", "2016-11-05 23:23:24.484511"], ["updated_at", "2016-11-05 23:23:24.484511"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Jenkins Inc"], ["volatility_index", 5], ["created_at", "2016-11-05 23:23:24.489237"], ["updated_at", "2016-11-05 23:23:24.489237"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Kemmer-West"], ["volatility_index", 3], ["created_at", "2016-11-05 23:23:24.496536"], ["updated_at", "2016-11-05 23:23:24.496536"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Erdman-Stamm"], ["volatility_index", 3], ["created_at", "2016-11-05 23:23:24.499292"], ["updated_at", "2016-11-05 23:23:24.499292"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Johnson-Roob"], ["volatility_index", 7], ["created_at", "2016-11-05 23:24:11.571388"], ["updated_at", "2016-11-05 23:24:11.571388"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Williamson, Howell and Osinski"], ["volatility_index", 3], ["created_at", "2016-11-05 23:24:11.595304"], ["updated_at", "2016-11-05 23:24:11.595304"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "stocks" ("company_name", "starting_value", "min_value", "max_value", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["company_name", "Stokes LLC"], ["starting_value", 58.83], ["min_value", 6.0], ["max_value", 170229.0], ["category_id", 78], ["created_at", "2016-11-05 23:24:11.597428"], ["updated_at", "2016-11-05 23:24:11.597428"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Williamson-Brakus"], ["volatility_index", 9], ["created_at", "2016-11-05 23:24:11.601389"], ["updated_at", "2016-11-05 23:24:11.601389"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Zieme LLC"], ["volatility_index", 3], ["created_at", "2016-11-05 23:24:11.604872"], ["updated_at", "2016-11-05 23:24:11.604872"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bergstrom, Kshlerin and Volkman"], ["volatility_index", 2], ["created_at", "2016-11-05 23:24:11.609218"], ["updated_at", "2016-11-05 23:24:11.609218"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Wolf Group"], ["volatility_index", 3], ["created_at", "2016-11-05 23:24:11.613241"], ["updated_at", "2016-11-05 23:24:11.613241"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Cremin and Sons"], ["volatility_index", 1], ["created_at", "2016-11-05 23:24:11.617606"], ["updated_at", "2016-11-05 23:24:11.617606"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Leuschke-Yost"], ["volatility_index", 6], ["created_at", "2016-11-05 23:24:11.620654"], ["updated_at", "2016-11-05 23:24:11.620654"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bogisich and Sons"], ["volatility_index", 5], ["created_at", "2016-11-05 23:24:11.624881"], ["updated_at", "2016-11-05 23:24:11.624881"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Pouros, Fadel and Lind"], ["volatility_index", 8], ["created_at", "2016-11-05 23:24:11.631295"], ["updated_at", "2016-11-05 23:24:11.631295"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "volatility_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Douglas Inc"], ["volatility_index", 3], ["created_at", "2016-11-05 23:24:11.633978"], ["updated_at", "2016-11-05 23:24:11.633978"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

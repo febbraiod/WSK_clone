@@ -6,6 +6,6 @@ FactoryGirl.define  do
     f.starting_value {Faker::Commerce.price}
     f.min_value {rand(10..99)/10}
     f.max_value {Faker::Number.number(6)}
-    f.category {Category.new(title: 'Industrial', volatility_index: 3)}
+    category
   end
 end
