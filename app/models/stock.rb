@@ -17,12 +17,12 @@ class Stock < ActiveRecord::Base
   end
 
 
-  def stock_to_board
+  def generate_year
     stock_year = [self.starting_value]
 
     i = 0
     while i <= 51
-      gain_or_loss = up_or_down(self.category)
+      gain_or_loss = up_or_down(self.category, i)
       percent_change = rand(0..self.category.volatility_index).to_f
       stock_this_week = stock_year[i] + (stock_year[i] * (percent_change/100 * gain_or_loss))
       
