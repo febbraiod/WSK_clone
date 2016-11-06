@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104213925) do
+ActiveRecord::Schema.define(version: 20161106143447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,32 @@ ActiveRecord::Schema.define(version: 20161104213925) do
     t.integer  "volatility_index"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "gameboards", force: :cascade do |t|
+    t.integer  "week",            default: 1
+    t.decimal  "ATNT",            default: [],              array: true
+    t.decimal  "Boing",           default: [],              array: true
+    t.decimal  "Xearox",          default: [],              array: true
+    t.decimal  "YBM",             default: [],              array: true
+    t.decimal  "Yapple",          default: [],              array: true
+    t.decimal  "Bethleham",       default: [],              array: true
+    t.decimal  "Chryer",          default: [],              array: true
+    t.decimal  "PanAm",           default: [],              array: true
+    t.decimal  "Strayhound",      default: [],              array: true
+    t.decimal  "Teradying",       default: [],              array: true
+    t.decimal  "AmericanDepress", default: [],              array: true
+    t.decimal  "Exconrail",       default: [],              array: true
+    t.decimal  "FiredmansFund",   default: [],              array: true
+    t.decimal  "Reebucks",        default: [],              array: true
+    t.decimal  "CharlesSchlob",   default: [],              array: true
+    t.decimal  "Carnivore",       default: [],              array: true
+    t.decimal  "Centipede",       default: [],              array: true
+    t.decimal  "Coughman",        default: [],              array: true
+    t.decimal  "Marrinot",        default: [],              array: true
+    t.decimal  "Rattel",          default: [],              array: true
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "stocks", force: :cascade do |t|

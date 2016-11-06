@@ -17,12 +17,12 @@ class Stock < ActiveRecord::Base
   end
 
 
-  def generate_year
+  def generate_year(gameboard = nil)
     stock_year = [self.starting_value]
 
     i = 0
     while i <= 51
-      gain_or_loss = up_or_down(self.category, i)
+      gain_or_loss = up_or_down(self.category, i, gameboard)
       percent_change = rand(0..self.category.volatility_index).to_f
       stock_this_week = stock_year[i] + (stock_year[i] * (percent_change/100 * gain_or_loss))
       
@@ -41,23 +41,36 @@ class Stock < ActiveRecord::Base
 
   #helpers
 
-  def up_or_down(category, day)
+  def up_or_down(category, week, gameboard)
     if category.title == 'Blue Chip' || category.title == 'Speculative'
       return rand(0..1) * 2 - 1
     elsif category.title == 'Growth'
       die = rand(1..100)
       die >= 65 ? -1 : 1
     elsif category.title == 'Cyclical'
-      check_economy(day)
+      check_economy(week, gameboard)
     end
   end
 
-  def check_economy(day)
-    # if  the total of all stock prices today is higher than yesterday || day = 0
-      #   1
-    # else
-      #   -1
-    # end
+  def check_economy(week, gameboard)
+    last_week = 0
+    this_week = 0
+    gameboard.attributes.each do |k, v|
+      if k != 'week' && k != 'id' && k != 'created_at' && k != "updated_at"
+        stock_cat = Stock.find_by(company_name: k).category.title
+        last_week += v[week - 1] unless week == 0 || stock_cat == 'Cyclical'
+        this_week += v[week] unless stock_cat == 'Cyclical'
+      end
+    end
+
+    if  this_week > last_week
+      #stocks became too predictable, needed to introduce some randomness
+      die = rand(1..100)
+      die <= 85 ? 1 : -1
+    else
+      die = rand(1..100)
+      die >= 85 ? 1 : -1
+    end
   end
 
 end
