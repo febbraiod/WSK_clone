@@ -31,7 +31,7 @@ stock = Stock.create(company_name: 'Chryer', starting_value: 48, min_value: 2, m
 stock.category = Category.find_by(title: 'Speculative')
 stock.save
 
-stock = Stock.create(company_name: 'Pan Am', starting_value: 26, min_value: 0.2, max_value: 110)
+stock = Stock.create(company_name: 'PanAm', starting_value: 26, min_value: 0.2, max_value: 110)
 stock.category = Category.find_by(title: 'Speculative')
 stock.save
 
@@ -43,7 +43,7 @@ stock = Stock.create(company_name: 'Teradying', starting_value: 37, min_value: 1
 stock.category = Category.find_by(title: 'Speculative')
 stock.save
 
-stock = Stock.create(company_name: 'American Depress', starting_value: 65, min_value: 42, max_value: 97)
+stock = Stock.create(company_name: 'AmericanDepress', starting_value: 65, min_value: 42, max_value: 97)
 stock.category = Category.find_by(title: 'Growth')
 stock.save
 
