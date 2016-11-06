@@ -12,7 +12,7 @@ class Stock < ActiveRecord::Base
 
   def starting_price_is_between
     if min_value && max_value && starting_value
-      starting_value < min_value || starting_value > max_value ? errors.add(:starting_price, "must be between min and max") : true
+      starting_value < min_value || starting_value > max_value ? errors.add(:starting_price, "starting price must be between min and max") : true
     end
   end
 
@@ -22,9 +22,9 @@ class Stock < ActiveRecord::Base
 
     i = 0
     while i <= 51
-      up_or_down = rand(0..1) * 2 - 1
-      percent_change = rand(0..5).to_f
-      stock_this_week = stock_year[i] + (stock_year[i] * (percent_change/100 * self.category.volatility_index * up_or_down))
+      gain_or_loss = up_or_down(self.category)
+      percent_change = rand(0..self.category.volatility_index).to_f
+      stock_this_week = stock_year[i] + (stock_year[i] * (percent_change/100 * gain_or_loss))
       
       if stock_this_week > self.max_value
         stock_this_week = self.max_value
@@ -37,6 +37,27 @@ class Stock < ActiveRecord::Base
     end
 
     stock_year
+  end
+
+  #helpers
+
+  def up_or_down(category, day)
+    if category.title == 'Blue Chip' || category.title == 'Speculative'
+      return rand(0..1) * 2 - 1
+    elsif category.title == 'Growth'
+      die = rand(1..100)
+      die >= 65 ? -1 : 1
+    elsif category.title == 'Cyclical'
+      check_economy(day)
+    end
+  end
+
+  def check_economy(day)
+    # if  the total of all stock prices today is higher than yesterday || day = 0
+      #   1
+    # else
+      #   -1
+    # end
   end
 
 end
