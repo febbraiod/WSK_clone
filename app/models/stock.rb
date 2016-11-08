@@ -55,20 +55,19 @@ class Stock < ActiveRecord::Base
   def check_economy(week, gameboard)
     last_week = 0
     this_week = 0
-    gameboard.attributes.each do |k, v|
-      if k != 'week' && k != 'id' && k != 'created_at' && k != "updated_at"
-        stock_cat = Stock.find_by(company_name: k).category.title
-        last_week += v[week - 1] unless week == 0 || stock_cat == 'Cyclical'
-        this_week += v[week] unless stock_cat == 'Cyclical'
+    gameboard.attributes.each do |stock_name, stock_year|
+      if !['week', 'id', 'created_at', "updated_at"].include?(stock_name)
+        stock_cat = Stock.find_by(company_name: stock_name).category.title
+        last_week +=  stock_year[week - 1] unless week == 0 || stock_cat == 'Cyclical'
+        this_week +=  stock_year[week] unless stock_cat == 'Cyclical'
       end
     end
 
-    if  this_week > last_week
+    die = rand(1..100)
+    if this_week > last_week
       #stocks became too predictable, needed to introduce some randomness
-      die = rand(1..100)
       die <= 85 ? 1 : -1
     else
-      die = rand(1..100)
       die >= 85 ? 1 : -1
     end
   end
