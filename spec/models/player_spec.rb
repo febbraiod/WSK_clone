@@ -10,15 +10,16 @@ RSpec.describe Player, type: :model do
   end
 
   it "is not valid without a name" do
-    expect(FactoryGirl.build(:stock, name: nil)).to_not be_valid
+    expect(FactoryGirl.build(:player, name: nil)).to_not be_valid
   end
 
   it "is not valid without a bank_account" do
-    expect(FactoryGirl.build(:stock, bank_account: nil)).to_not be_valid
+    expect(FactoryGirl.build(:player, bank_account: nil)).to_not be_valid
   end
 
-  #can test existance but need to flesh out relationships to actually calculate
-  it 'has a net worth' do
+  it "is starts with a bank_account of $500,000" do
+    p = FactoryGirl.build(:player)
+    expect(p.bank_account).to eq(500000.0)
   end
 
   it "belongs to a game" do
