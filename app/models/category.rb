@@ -6,3 +6,6 @@ class Category < ActiveRecord::Base
   validates_presence_of :volatility_index
 
 end
+
+
+

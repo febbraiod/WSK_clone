@@ -33,9 +33,9 @@ RSpec.describe Stock, type: :model do
     expect(FactoryGirl.build(:stock, min_value: 5, max_value: 100, starting_value: 1)).to_not be_valid
   end
 
-  context "stock years are generated at beginning of game with stock to board method" do
+  context "stock years are generated at beginning of game with generate_year method" do
     stock = FactoryGirl.build(:stock)
-    stock_year = stock.stock_to_board
+    stock_year = stock.generate_year
 
     it "generates a stock year" do
       stock_year.length == 52
@@ -47,3 +47,5 @@ RSpec.describe Stock, type: :model do
   end
 
 end
+
+

@@ -12,10 +12,9 @@ class Stock < ActiveRecord::Base
 
   def starting_price_is_between
     if min_value && max_value && starting_value
-      starting_value < min_value || starting_value > max_value ? errors.add(:starting_price, "starting price must be between min and max") : true
+      starting_value > min_value && starting_value < max_value ? true : errors.add(:starting_price, "must be between min and max")
     end
   end
-
 
   def generate_year(gameboard = nil)
     stock_year = [self.starting_value]
@@ -45,6 +44,7 @@ class Stock < ActiveRecord::Base
     if category.title == 'Blue Chip' || category.title == 'Speculative'
       return rand(0..1) * 2 - 1
     elsif category.title == 'Growth'
+      #growth stocks show tend to go up by small amounts
       die = rand(1..100)
       die >= 65 ? -1 : 1
     elsif category.title == 'Cyclical'
@@ -63,9 +63,9 @@ class Stock < ActiveRecord::Base
       end
     end
 
+    #these stocks became too predictable, needed to introduce some randomness
     die = rand(1..100)
     if this_week > last_week
-      #stocks became too predictable, needed to introduce some randomness
       die <= 85 ? 1 : -1
     else
       die >= 85 ? 1 : -1

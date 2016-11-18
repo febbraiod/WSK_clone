@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106143447) do
+ActiveRecord::Schema.define(version: 20161117201535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20161106143447) do
     t.decimal  "Rattel",          default: [],              array: true
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "bank_account", precision: 8, scale: 2
+    t.decimal  "net_worth",    precision: 8, scale: 2
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "stocks", force: :cascade do |t|

@@ -9,3 +9,5 @@ FactoryGirl.define  do
     category
   end
 end
+
+
